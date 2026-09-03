@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Sistema de Análise de Pedidos — Documentação</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+
+  :root {
+    --tinta: #16171b;
+    --suave: #5b5f66;
+    --linha: #d9dce1;
+    --fundo-caixa: #f6f7f9;
+    --acento: #0a7d3c;
+    --alerta: #b3123f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--tinta);
+    line-height: 1.55;
+    font-size: 10.5pt;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 28px 24px 60px;
+    background: #fff;
+  }
+
+  h1 { font-size: 21pt; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+  h2 {
+    font-size: 13pt; margin: 30px 0 10px; padding-bottom: 5px;
+    border-bottom: 2px solid var(--tinta); letter-spacing: -0.01em;
+  }
+  h3 { font-size: 11pt; margin: 20px 0 6px; }
+  p { margin: 0 0 10px; }
+  ul, ol { margin: 0 0 10px; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+  strong { font-weight: 650; }
+
+  .subtitulo { color: var(--suave); font-size: 11pt; margin: 0 0 4px; }
+  .meta { color: var(--suave); font-size: 9pt; margin-bottom: 22px; }
+
+  code, .mono {
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    font-size: 9pt;
+  }
+  code { background: var(--fundo-caixa); padding: 1px 5px; border-radius: 3px; }
+
+  pre {
+    background: var(--fundo-caixa); border: 1px solid var(--linha);
+    border-radius: 6px; padding: 11px 13px; overflow-x: auto;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    font-size: 8.8pt; line-height: 1.5; margin: 0 0 12px;
+  }
+  pre code { background: none; padding: 0; }
+  .comentario { color: var(--suave); }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 9.5pt; }
+  th, td { text-align: left; padding: 6px 9px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { background: var(--fundo-caixa); font-weight: 650; font-size: 8.8pt;
+       text-transform: uppercase; letter-spacing: 0.04em; color: var(--suave); }
+  td.num { text-align: right; font-family: "JetBrains Mono", Consolas, monospace; white-space: nowrap; }
+  .ok { color: var(--acento); font-weight: 650; }
+
+  /* ---- espaço reservado para os prints ---- */
+  figure {
+    margin: 16px 0 20px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  figure img {
+    display: block; width: 100%; height: auto;
+    border: 1px solid var(--linha); border-radius: 6px;
+  }
+  figure.vazio img { display: none; }
+  figure .slot { display: none; }
+  figure.vazio .slot {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 6px; min-height: 190px; padding: 22px;
+    border: 2px dashed #b9bec6; border-radius: 8px;
+    background: repeating-linear-gradient(45deg, #fbfbfc, #fbfbfc 10px, #f4f5f7 10px, #f4f5f7 20px);
+    text-align: center;
+  }
+  .slot .arquivo {
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 9.5pt; font-weight: 650; color: var(--tinta);
+    background: #fff; border: 1px solid var(--linha); border-radius: 4px; padding: 3px 9px;
+  }
+  .slot .dica { font-size: 9pt; color: var(--suave); max-width: 62%; }
+  figcaption { font-size: 8.8pt; color: var(--suave); margin-top: 7px; }
+
+  .caixa {
+    border: 1px solid var(--linha); border-left: 3px solid var(--tinta);
+    background: var(--fundo-caixa); border-radius: 0 6px 6px 0;
+    padding: 11px 14px; margin: 0 0 14px; font-size: 9.6pt;
+  }
+  .caixa p:last-child { margin-bottom: 0; }
+
+  .quebra { page-break-before: always; break-before: page; }
+  h2, h3 { page-break-after: avoid; break-after: avoid; }
+  table, pre { page-break-inside: avoid; break-inside: avoid; }
+
+  .rodape {
+    margin-top: 34px; padding-top: 12px; border-top: 1px solid var(--linha);
+    font-size: 8.5pt; color: var(--suave);
+  }
+
+  .aviso-tela {
+    background: #fff8e6; border: 1px solid #e8d9a8; border-radius: 6px;
+    padding: 12px 15px; margin-bottom: 26px; font-size: 9.5pt;
+  }
+  @media print { .aviso-tela { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="aviso-tela">
+  <strong>Como gerar o PDF:</strong> salve os prints em <code>docs/img/</code> com os nomes
+  indicados nas caixas tracejadas, recarregue esta página e use <strong>Ctrl+P → Salvar como
+  PDF</strong>. Marque “Gráficos de fundo” nas opções de impressão. Esta faixa amarela não sai
+  no PDF.
+</div>
+
+<h1>Sistema de Análise de Pedidos</h1>
+<p class="subtitulo">Engine de regras de negócio em Python e dashboard de auditoria em Next.js</p>
+<p class="meta">Case técnico — CloudWalk</p>
+
+<h2>1. O que foi construído</h2>
+
+<p>
+  O desafio pedia um script Python que consolidasse clientes e pedidos, aplicasse regras de
+  desconto, detectasse pedidos anômalos e gerasse um relatório, com filtro de datas pela linha
+  de comando. Esse script é o núcleo da entrega e atende aos cinco requisitos.
+</p>
+<p>
+  Sobre ele foi construído um <strong>dashboard de auditoria</strong>, para que o resultado da
+  análise pudesse ser lido, filtrado e conferido por alguém que não vai abrir um JSON no
+  terminal — que é a situação real de quem precisa auditar números financeiros.
+</p>
+
+<table>
+  <thead>
+    <tr><th style="width:62%">Requisito do enunciado</th><th>Onde está</th><th style="width:9%">Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1. Consolidar clientes e pedidos por <code>customer_id</code></td><td class="mono">analyzer.py · analyze()</td><td class="ok">✓</td></tr>
+    <tr><td>2a. VIP com 10% de desconto</td><td class="mono">calculate_discount()</td><td class="ok">✓</td></tr>
+    <tr><td>2b. Regular acima de R$ 500 com 5%</td><td class="mono">calculate_discount()</td><td class="ok">✓</td></tr>
+    <tr><td>2c. Desconto só com 2+ pedidos no período</td><td class="mono">calculate_discount()</td><td class="ok">✓</td></tr>
+    <tr><td>3. Pedido acima de 3x a média do cliente é suspeito</td><td class="mono">find_suspicious_orders()</td><td class="ok">✓</td></tr>
+    <tr><td>4. Relatório com nome, categoria, totais e suspeitos</td><td class="mono">build_report() → JSON</td><td class="ok">✓</td></tr>
+    <tr><td>5. Intervalo de datas por linha de comando</td><td class="mono">--start-date / --end-date</td><td class="ok">✓</td></tr>
+  </tbody>
+</table>
+
+<h2>2. Como rodar</h2>
+
+<p>Pré-requisitos: <strong>Python 3.10+</strong> e <strong>Node.js 18.18+</strong>. Da raiz do projeto:</p>
+
+<pre><code>npm run setup    <span class="comentario"># instala o front-end e gera o report.json</span>
+npm run dev      <span class="comentario"># abre o dashboard em http://localhost:3000</span>
+npm test         <span class="comentario"># roda os 91 testes Python + 132 do front-end</span></code></pre>
+
+<p>O script Python roda sozinho, sem nada do front-end e sem bibliotecas externas:</p>
+
+<pre><code><span class="comentario"># relatório completo no terminal</span>
+python3 backend/analyzer.py
+
+<span class="comentario"># com filtro de período (limites inclusivos) e saída em arquivo</span>
+python3 backend/analyzer.py --start-date 2025-01-01 --end-date 2025-01-31 \
+  --output frontend/public/report.json</code></pre>
+
+<div class="caixa">
+  <p>
+    <strong>Sobre o virtualenv:</strong> o <code>analyzer.py</code> usa apenas a biblioteca padrão
+    do Python. A única dependência é o <code>pytest</code>, e só para rodar os testes:
+    <code>pip install -r backend/requirements.txt</code>. Se houver um <code>.venv</code> ativado,
+    o pytest precisa estar instalado dentro dele.
+  </p>
+</div>
+
+<h2>3. A tela</h2>
+
+<figure id="fig1">
+  <img src="img/01-dashboard.png" alt="Dashboard com os quatro indicadores e a tabela de clientes">
+  <div class="slot">
+    <span class="arquivo">docs/img/01-dashboard.png</span>
+    <span class="dica">Tela inteira do dashboard: os quatro cards no topo e a tabela de clientes logo abaixo.</span>
+  </div>
+  <figcaption>
+    <strong>Figura 1.</strong> Visão geral. Os cards mostram 50 clientes, volume bruto de
+    R$ 596.652,92, líquido de R$ 553.270,40 (R$ 43.382,52 em descontos) e 49 transações suspeitas.
+    A tabela traz o consolidado por cliente, com o desconto em percentual e em reais.
+  </figcaption>
+</figure>
+
+<figure id="fig2">
+  <img src="img/02-filtro-periodo.png" alt="Cards e tabela após filtrar o período de janeiro">
+  <div class="slot">
+    <span class="arquivo">docs/img/02-filtro-periodo.png</span>
+    <span class="dica">Preencha “de 2025-01-01” e “até 2025-01-31” e capture os cards já recalculados, com o selo de período visível.</span>
+  </div>
+  <figcaption>
+    <strong>Figura 2.</strong> Filtro de período. Restringindo a janeiro, os números passam a
+    R$ 289.379,77 de volume bruto, R$ 269.181,41 de líquido e 16 suspeitas — os mesmos valores
+    que a linha de comando devolve para o mesmo intervalo.
+  </figcaption>
+</figure>
+
+<figure id="fig3">
+  <img src="img/03-gaveta-anomalias.png" alt="Painel lateral com o detalhe dos pedidos suspeitos">
+  <div class="slot">
+    <span class="arquivo">docs/img/03-gaveta-anomalias.png</span>
+    <span class="dica">Clique num botão “⚠ N suspeito(s)” da tabela e capture o painel lateral aberto.</span>
+  </div>
+  <figcaption>
+    <strong>Figura 3.</strong> Auditoria de anomalias. Para cada pedido suspeito o painel mostra
+    número, data, valor, a média do cliente e o limiar de 3x — o cálculo que motivou a marcação
+    fica visível, em vez de só o rótulo “suspeito”.
+  </figcaption>
+</figure>
+
+<h2 class="quebra">4. Como o sistema está organizado</h2>
+
+<pre><code>backend/analyzer.py     <span class="comentario">engine: consolidação, descontos, anomalias, CLI</span>
+backend/customers.json  <span class="comentario">entrada: 50 clientes</span>
+backend/orders.csv      <span class="comentario">entrada: 1000 pedidos</span>
+test_analyzer.py        <span class="comentario">91 testes das regras de negócio</span>
+
+frontend/app/page.tsx   <span class="comentario">composição da tela</span>
+frontend/hooks/         <span class="comentario">carga de dados e filtros locais</span>
+frontend/components/    <span class="comentario">cards, filtros, tabela, gaveta, avisos</span>
+frontend/lib/           <span class="comentario">validação do contrato, formatação, exportação em PDF</span>
+frontend/app/api/report <span class="comentario">rota que reexecuta o analyzer por período</span></code></pre>
+
+<h3>Os dois tipos de filtro</h3>
+
+<p>
+  A tela tem filtros de duas naturezas diferentes, e a distinção é a decisão de arquitetura mais
+  importante do projeto:
+</p>
+
+<table>
+  <thead>
+    <tr><th style="width:34%">Filtro</th><th>O que faz</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Período</strong> (de / até)</td>
+      <td>Reprocessa no backend. Muda <em>quais</em> pedidos entram na análise, então descontos e anomalias são recalculados pelo Python.</td>
+    </tr>
+    <tr>
+      <td>Busca, categoria, apenas anômalos</td>
+      <td>Recortam no navegador o resultado que já foi calculado. Não alteram nenhum número por cliente.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Mudar o período muda o total gasto, o mínimo de 2 pedidos e a média que define as anomalias.
+  Recalcular isso no navegador exigiria reescrever as regras de negócio em TypeScript, criando
+  <strong>duas fontes de verdade para a mesma regra financeira</strong> — exatamente o que uma
+  auditoria não pode ter. Por isso a interface pede ao backend: uma rota executa o
+  <code>analyzer.py</code> com as datas e devolve o resultado. As regras existem em um lugar só.
+</p>
+
+<h2>5. Decisões técnicas</h2>
+
+<h3>Dinheiro com <code>Decimal</code>, não <code>float</code></h3>
+<p>
+  Todo o cálculo monetário usa <code>Decimal</code> com arredondamento comercial
+  (<code>ROUND_HALF_UP</code>), e a conversão para número comum acontece só na hora de gravar o
+  JSON. O desconto é arredondado na origem e o líquido é obtido por subtração, de modo que
+  <em>bruto − líquido</em> seja exatamente o desconto exibido, sem divergência de centavos.
+</p>
+
+<h3>O relatório declara o próprio período</h3>
+<p>
+  O JSON é um envelope <code>{ periodo, clientes }</code>, onde <code>clientes</code> é a lista de
+  dicionários que o enunciado pede e <code>periodo</code> registra o recorte analisado. Um
+  relatório financeiro que não diz de que intervalo ele fala não é auditável: sem esse campo, um
+  relatório de janeiro fica indistinguível do relatório completo.
+</p>
+
+<h3>Execução do Python a partir da rota, com segurança</h3>
+<p>
+  As datas são validadas contra o formato <code>AAAA-MM-DD</code> antes de qualquer coisa, e o
+  processo é iniciado com lista de argumentos e sem shell — nada é interpretado por um
+  interpretador de comandos. Tentativas como <code>?start=; rm -rf /</code> são recusadas com
+  HTTP 400. Se o servidor não tiver Python, a página usa o <code>report.json</code> já gerado e
+  avisa que o filtro de período está indisponível, em vez de quebrar.
+</p>
+
+<h3>Escolhas de interpretação do enunciado</h3>
+<ul>
+  <li>
+    <strong>Limiar de R$ 500 exclusivo.</strong> “Acima de R$ 500” significa que R$ 500,00 não
+    recebe desconto e R$ 500,01 recebe.
+  </li>
+  <li>
+    <strong>Mínimo de 2 pedidos avaliado no período filtrado</strong>, não no arquivo inteiro —
+    é o que “no período analisado” pede.
+  </li>
+  <li>
+    <strong>Média inclusiva nas anomalias</strong>, como no enunciado: o próprio pedido entra na
+    média do cliente. A variante que exclui o pedido da média está disponível na CLI, em
+    <code>--anomaly-baseline exclusive</code>.
+  </li>
+  <li>
+    <strong>Clientes sem pedidos no período aparecem zerados</strong>, para a auditoria enxergar
+    a base completa em vez de um recorte silencioso.
+  </li>
+</ul>
+
+<h2>6. Testes</h2>
+
+<table>
+  <thead>
+    <tr><th style="width:26%">Suíte</th><th style="width:12%">Casos</th><th>O que cobre</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>pytest</strong><br><span class="mono" style="font-size:8.5pt">test_analyzer.py</span></td>
+      <td class="num">91</td>
+      <td>As três regras de desconto, o limiar de R$ 500, o mínimo de 2 pedidos, a detecção de
+          anomalias, o filtro de datas, a precisão monetária e a robustez de leitura dos arquivos.</td>
+    </tr>
+    <tr>
+      <td><strong>Vitest</strong><br><span class="mono" style="font-size:8.5pt">frontend/tests/</span></td>
+      <td class="num">132</td>
+      <td>Validação do contrato do JSON, os componentes da tela, acessibilidade da gaveta de
+          anomalias e a integração da página, incluindo o comportamento do filtro de período.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Um dos testes faz o <strong>contrato entre as duas linguagens</strong>: ele lê os tipos
+  TypeScript e compara com as chaves que o Python produz, falhando se as duas pontas divergirem
+  em silêncio.
+</p>
+
+<pre><code>npm test                        <span class="comentario"># tudo</span>
+python3 -m pytest -k desconto   <span class="comentario"># só as regras de desconto</span>
+python3 -m pytest -k suspeito   <span class="comentario"># só a detecção de anomalias</span></code></pre>
+
+<figure id="fig4">
+  <img src="img/04-testes.png" alt="Saída do terminal com as duas suítes de teste passando">
+  <div class="slot">
+    <span class="arquivo">docs/img/04-testes.png</span>
+    <span class="dica">Print do terminal depois de rodar <code>npm test</code>, mostrando as duas suítes passando.</span>
+  </div>
+  <figcaption><strong>Figura 4.</strong> As duas suítes completas.</figcaption>
+</figure>
+
+<h2>7. Recursos adicionais da interface</h2>
+
+<ul>
+  <li>
+    <strong>Exportação em PDF</strong> — gera um documento de três páginas com resumo, o
+    consolidado por cliente e uma página só de pedidos suspeitos. Exporta o que está na tela: com
+    filtros ativos, o PDF declara qual recorte está sendo mostrado.
+  </li>
+  <li>
+    <strong>Importação de relatório</strong> — aceita um <code>report.json</code> gerado em outra
+    máquina ou período. O conteúdo é validado campo a campo e um arquivo fora do contrato mostra
+    uma mensagem apontando a divergência, sem quebrar a tela.
+  </li>
+  <li>
+    <strong>Acessibilidade</strong> — a gaveta de anomalias fecha com <code>Esc</code>, mantém o
+    foco do teclado contido enquanto está aberta e o devolve ao botão de origem ao fechar. Tabela
+    e avisos têm marcação semântica para leitores de tela.
+  </li>
+</ul>
+
+<figure id="fig5">
+  <img src="img/05-pdf-exportado.png" alt="Primeira página do PDF gerado pelo dashboard">
+  <div class="slot">
+    <span class="arquivo">docs/img/05-pdf-exportado.png</span>
+    <span class="dica">Opcional. Print da primeira página do PDF que o botão “Exportar relatório” gera.</span>
+  </div>
+  <figcaption><strong>Figura 5.</strong> Relatório exportado pelo dashboard.</figcaption>
+</figure>
+
+<div class="rodape">
+  Documentação do case técnico — Sistema de Análise de Pedidos.
+  Instruções completas de execução, contrato do relatório e roteiro de homologação estão no
+  <span class="mono">README.md</span> do repositório.
+</div>
+
+<script>
+  // Marca como "vazio" toda figura cujo print ainda não foi salvo, para o
+  // documento continuar legível antes das imagens existirem.
+  document.querySelectorAll('figure img').forEach((img) => {
+    const marcar = () => img.closest('figure').classList.add('vazio');
+    if (img.complete && img.naturalWidth === 0) marcar();
+    img.addEventListener('error', marcar);
+  });
+</script>
+
+</body>
+</html>
