@@ -1,0 +1,901 @@
+{
+  "periodo": {
+    "data_inicial": null,
+    "data_final": null
+  },
+  "clientes": [
+    {
+      "customer_id": 1,
+      "nome": "Cliente_1",
+      "categoria": "VIP",
+      "total_pedidos": 20,
+      "total_gasto_antes_desconto": 10863.68,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1086.37,
+      "total_gasto_apos_desconto": 9777.31,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 699,
+          "date": "2025-01-11",
+          "value": 1877.46,
+          "customer_mean": 543.18
+        }
+      ]
+    },
+    {
+      "customer_id": 2,
+      "nome": "Cliente_2",
+      "categoria": "VIP",
+      "total_pedidos": 22,
+      "total_gasto_antes_desconto": 13842.79,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1384.28,
+      "total_gasto_apos_desconto": 12458.51,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 309,
+          "date": "2025-02-23",
+          "value": 2281.29,
+          "customer_mean": 629.22
+        }
+      ]
+    },
+    {
+      "customer_id": 3,
+      "nome": "Cliente_3",
+      "categoria": "Regular",
+      "total_pedidos": 22,
+      "total_gasto_antes_desconto": 12879.27,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 643.96,
+      "total_gasto_apos_desconto": 12235.31,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 27,
+          "date": "2025-02-07",
+          "value": 2078.76,
+          "customer_mean": 585.42
+        }
+      ]
+    },
+    {
+      "customer_id": 4,
+      "nome": "Cliente_4",
+      "categoria": "VIP",
+      "total_pedidos": 24,
+      "total_gasto_antes_desconto": 14599.29,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1459.93,
+      "total_gasto_apos_desconto": 13139.36,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 548,
+          "date": "2025-02-04",
+          "value": 2097.08,
+          "customer_mean": 608.3
+        }
+      ]
+    },
+    {
+      "customer_id": 5,
+      "nome": "Cliente_5",
+      "categoria": "Regular",
+      "total_pedidos": 25,
+      "total_gasto_antes_desconto": 16672.7,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 833.64,
+      "total_gasto_apos_desconto": 15839.06,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 562,
+          "date": "2025-01-04",
+          "value": 2435.73,
+          "customer_mean": 666.91
+        }
+      ]
+    },
+    {
+      "customer_id": 6,
+      "nome": "Cliente_6",
+      "categoria": "VIP",
+      "total_pedidos": 16,
+      "total_gasto_antes_desconto": 10393.22,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1039.32,
+      "total_gasto_apos_desconto": 9353.9,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 382,
+          "date": "2025-02-28",
+          "value": 2218.88,
+          "customer_mean": 649.58
+        }
+      ]
+    },
+    {
+      "customer_id": 7,
+      "nome": "Cliente_7",
+      "categoria": "Regular",
+      "total_pedidos": 26,
+      "total_gasto_antes_desconto": 14875.0,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 743.75,
+      "total_gasto_apos_desconto": 14131.25,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 863,
+          "date": "2025-02-22",
+          "value": 2041.47,
+          "customer_mean": 572.12
+        }
+      ]
+    },
+    {
+      "customer_id": 8,
+      "nome": "Cliente_8",
+      "categoria": "Regular",
+      "total_pedidos": 18,
+      "total_gasto_antes_desconto": 9852.2,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 492.61,
+      "total_gasto_apos_desconto": 9359.59,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 316,
+          "date": "2025-01-30",
+          "value": 1811.59,
+          "customer_mean": 547.34
+        }
+      ]
+    },
+    {
+      "customer_id": 9,
+      "nome": "Cliente_9",
+      "categoria": "VIP",
+      "total_pedidos": 21,
+      "total_gasto_antes_desconto": 13896.23,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1389.62,
+      "total_gasto_apos_desconto": 12506.61,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 352,
+          "date": "2025-02-25",
+          "value": 2289.2,
+          "customer_mean": 661.73
+        }
+      ]
+    },
+    {
+      "customer_id": 10,
+      "nome": "Cliente_10",
+      "categoria": "VIP",
+      "total_pedidos": 14,
+      "total_gasto_antes_desconto": 8295.58,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 829.56,
+      "total_gasto_apos_desconto": 7466.02,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 629,
+          "date": "2025-02-11",
+          "value": 2043.64,
+          "customer_mean": 592.54
+        }
+      ]
+    },
+    {
+      "customer_id": 11,
+      "nome": "Cliente_11",
+      "categoria": "Regular",
+      "total_pedidos": 19,
+      "total_gasto_antes_desconto": 10278.08,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 513.9,
+      "total_gasto_apos_desconto": 9764.18,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 474,
+          "date": "2025-01-30",
+          "value": 1848.2,
+          "customer_mean": 540.95
+        }
+      ]
+    },
+    {
+      "customer_id": 12,
+      "nome": "Cliente_12",
+      "categoria": "Regular",
+      "total_pedidos": 19,
+      "total_gasto_antes_desconto": 12143.07,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 607.15,
+      "total_gasto_apos_desconto": 11535.92,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 814,
+          "date": "2025-02-14",
+          "value": 2133.67,
+          "customer_mean": 639.11
+        }
+      ]
+    },
+    {
+      "customer_id": 13,
+      "nome": "Cliente_13",
+      "categoria": "VIP",
+      "total_pedidos": 21,
+      "total_gasto_antes_desconto": 12806.26,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1280.63,
+      "total_gasto_apos_desconto": 11525.63,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 271,
+          "date": "2025-01-08",
+          "value": 2196.65,
+          "customer_mean": 609.82
+        }
+      ]
+    },
+    {
+      "customer_id": 14,
+      "nome": "Cliente_14",
+      "categoria": "VIP",
+      "total_pedidos": 29,
+      "total_gasto_antes_desconto": 17819.47,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1781.95,
+      "total_gasto_apos_desconto": 16037.52,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 446,
+          "date": "2025-02-04",
+          "value": 2222.36,
+          "customer_mean": 614.46
+        }
+      ]
+    },
+    {
+      "customer_id": 15,
+      "nome": "Cliente_15",
+      "categoria": "Regular",
+      "total_pedidos": 25,
+      "total_gasto_antes_desconto": 16140.87,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 807.04,
+      "total_gasto_apos_desconto": 15333.83,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 889,
+          "date": "2025-02-16",
+          "value": 2256.54,
+          "customer_mean": 645.63
+        }
+      ]
+    },
+    {
+      "customer_id": 16,
+      "nome": "Cliente_16",
+      "categoria": "VIP",
+      "total_pedidos": 22,
+      "total_gasto_antes_desconto": 13388.03,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1338.8,
+      "total_gasto_apos_desconto": 12049.23,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 936,
+          "date": "2025-02-17",
+          "value": 2097.7,
+          "customer_mean": 608.55
+        }
+      ]
+    },
+    {
+      "customer_id": 17,
+      "nome": "Cliente_17",
+      "categoria": "VIP",
+      "total_pedidos": 15,
+      "total_gasto_antes_desconto": 8471.63,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 847.16,
+      "total_gasto_apos_desconto": 7624.47,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 294,
+          "date": "2025-01-27",
+          "value": 1875.31,
+          "customer_mean": 564.78
+        }
+      ]
+    },
+    {
+      "customer_id": 18,
+      "nome": "Cliente_18",
+      "categoria": "VIP",
+      "total_pedidos": 18,
+      "total_gasto_antes_desconto": 9247.13,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 924.71,
+      "total_gasto_apos_desconto": 8322.42,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 96,
+          "date": "2025-02-22",
+          "value": 1696.69,
+          "customer_mean": 513.73
+        }
+      ]
+    },
+    {
+      "customer_id": 19,
+      "nome": "Cliente_19",
+      "categoria": "Regular",
+      "total_pedidos": 16,
+      "total_gasto_antes_desconto": 8791.16,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 439.56,
+      "total_gasto_apos_desconto": 8351.6,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 865,
+          "date": "2025-02-06",
+          "value": 1876.63,
+          "customer_mean": 549.45
+        }
+      ]
+    },
+    {
+      "customer_id": 20,
+      "nome": "Cliente_20",
+      "categoria": "VIP",
+      "total_pedidos": 17,
+      "total_gasto_antes_desconto": 9484.12,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 948.41,
+      "total_gasto_apos_desconto": 8535.71,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 996,
+          "date": "2025-02-08",
+          "value": 1857.09,
+          "customer_mean": 557.89
+        }
+      ]
+    },
+    {
+      "customer_id": 21,
+      "nome": "Cliente_21",
+      "categoria": "VIP",
+      "total_pedidos": 11,
+      "total_gasto_antes_desconto": 6643.26,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 664.33,
+      "total_gasto_apos_desconto": 5978.93,
+      "pedidos_suspeitos": []
+    },
+    {
+      "customer_id": 22,
+      "nome": "Cliente_22",
+      "categoria": "Regular",
+      "total_pedidos": 20,
+      "total_gasto_antes_desconto": 10234.66,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 511.73,
+      "total_gasto_apos_desconto": 9722.93,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 489,
+          "date": "2025-01-16",
+          "value": 1786.87,
+          "customer_mean": 511.73
+        }
+      ]
+    },
+    {
+      "customer_id": 23,
+      "nome": "Cliente_23",
+      "categoria": "VIP",
+      "total_pedidos": 16,
+      "total_gasto_antes_desconto": 9060.2,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 906.02,
+      "total_gasto_apos_desconto": 8154.18,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 395,
+          "date": "2025-02-05",
+          "value": 1990.1,
+          "customer_mean": 566.26
+        }
+      ]
+    },
+    {
+      "customer_id": 24,
+      "nome": "Cliente_24",
+      "categoria": "Regular",
+      "total_pedidos": 28,
+      "total_gasto_antes_desconto": 17938.74,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 896.94,
+      "total_gasto_apos_desconto": 17041.8,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 741,
+          "date": "2025-02-20",
+          "value": 2333.54,
+          "customer_mean": 640.67
+        }
+      ]
+    },
+    {
+      "customer_id": 25,
+      "nome": "Cliente_25",
+      "categoria": "Regular",
+      "total_pedidos": 20,
+      "total_gasto_antes_desconto": 11444.43,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 572.22,
+      "total_gasto_apos_desconto": 10872.21,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 706,
+          "date": "2025-02-22",
+          "value": 1996.47,
+          "customer_mean": 572.22
+        }
+      ]
+    },
+    {
+      "customer_id": 26,
+      "nome": "Cliente_26",
+      "categoria": "Regular",
+      "total_pedidos": 16,
+      "total_gasto_antes_desconto": 7543.43,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 377.17,
+      "total_gasto_apos_desconto": 7166.26,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 921,
+          "date": "2025-02-25",
+          "value": 1593.11,
+          "customer_mean": 471.46
+        }
+      ]
+    },
+    {
+      "customer_id": 27,
+      "nome": "Cliente_27",
+      "categoria": "VIP",
+      "total_pedidos": 17,
+      "total_gasto_antes_desconto": 9869.42,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 986.94,
+      "total_gasto_apos_desconto": 8882.48,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 943,
+          "date": "2025-01-14",
+          "value": 2020.26,
+          "customer_mean": 580.55
+        }
+      ]
+    },
+    {
+      "customer_id": 28,
+      "nome": "Cliente_28",
+      "categoria": "Regular",
+      "total_pedidos": 17,
+      "total_gasto_antes_desconto": 10611.12,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 530.56,
+      "total_gasto_apos_desconto": 10080.56,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 507,
+          "date": "2025-01-09",
+          "value": 2033.77,
+          "customer_mean": 624.18
+        }
+      ]
+    },
+    {
+      "customer_id": 29,
+      "nome": "Cliente_29",
+      "categoria": "Regular",
+      "total_pedidos": 24,
+      "total_gasto_antes_desconto": 13776.62,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 688.83,
+      "total_gasto_apos_desconto": 13087.79,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 909,
+          "date": "2025-01-15",
+          "value": 2086.11,
+          "customer_mean": 574.03
+        }
+      ]
+    },
+    {
+      "customer_id": 30,
+      "nome": "Cliente_30",
+      "categoria": "Regular",
+      "total_pedidos": 23,
+      "total_gasto_antes_desconto": 11902.77,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 595.14,
+      "total_gasto_apos_desconto": 11307.63,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 596,
+          "date": "2025-01-12",
+          "value": 1863.76,
+          "customer_mean": 517.51
+        }
+      ]
+    },
+    {
+      "customer_id": 31,
+      "nome": "Cliente_31",
+      "categoria": "Regular",
+      "total_pedidos": 31,
+      "total_gasto_antes_desconto": 19678.42,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 983.92,
+      "total_gasto_apos_desconto": 18694.5,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 515,
+          "date": "2025-02-16",
+          "value": 2295.56,
+          "customer_mean": 634.79
+        }
+      ]
+    },
+    {
+      "customer_id": 32,
+      "nome": "Cliente_32",
+      "categoria": "VIP",
+      "total_pedidos": 26,
+      "total_gasto_antes_desconto": 16768.75,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1676.88,
+      "total_gasto_apos_desconto": 15091.87,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 933,
+          "date": "2025-02-15",
+          "value": 2337.51,
+          "customer_mean": 644.95
+        }
+      ]
+    },
+    {
+      "customer_id": 33,
+      "nome": "Cliente_33",
+      "categoria": "VIP",
+      "total_pedidos": 16,
+      "total_gasto_antes_desconto": 8290.72,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 829.07,
+      "total_gasto_apos_desconto": 7461.65,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 400,
+          "date": "2025-01-12",
+          "value": 1677.68,
+          "customer_mean": 518.17
+        }
+      ]
+    },
+    {
+      "customer_id": 34,
+      "nome": "Cliente_34",
+      "categoria": "VIP",
+      "total_pedidos": 15,
+      "total_gasto_antes_desconto": 9260.91,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 926.09,
+      "total_gasto_apos_desconto": 8334.82,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 186,
+          "date": "2025-02-19",
+          "value": 2121.62,
+          "customer_mean": 617.39
+        }
+      ]
+    },
+    {
+      "customer_id": 35,
+      "nome": "Cliente_35",
+      "categoria": "Regular",
+      "total_pedidos": 18,
+      "total_gasto_antes_desconto": 11256.07,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 562.8,
+      "total_gasto_apos_desconto": 10693.27,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 195,
+          "date": "2025-01-16",
+          "value": 2062.92,
+          "customer_mean": 625.34
+        }
+      ]
+    },
+    {
+      "customer_id": 36,
+      "nome": "Cliente_36",
+      "categoria": "Regular",
+      "total_pedidos": 23,
+      "total_gasto_antes_desconto": 12292.28,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 614.61,
+      "total_gasto_apos_desconto": 11677.67,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 221,
+          "date": "2025-01-16",
+          "value": 1840.36,
+          "customer_mean": 534.45
+        }
+      ]
+    },
+    {
+      "customer_id": 37,
+      "nome": "Cliente_37",
+      "categoria": "Regular",
+      "total_pedidos": 25,
+      "total_gasto_antes_desconto": 15265.9,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 763.3,
+      "total_gasto_apos_desconto": 14502.6,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 703,
+          "date": "2025-01-04",
+          "value": 2229.15,
+          "customer_mean": 610.64
+        }
+      ]
+    },
+    {
+      "customer_id": 38,
+      "nome": "Cliente_38",
+      "categoria": "VIP",
+      "total_pedidos": 18,
+      "total_gasto_antes_desconto": 12414.54,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1241.45,
+      "total_gasto_apos_desconto": 11173.09,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 290,
+          "date": "2025-01-09",
+          "value": 2340.33,
+          "customer_mean": 689.7
+        }
+      ]
+    },
+    {
+      "customer_id": 39,
+      "nome": "Cliente_39",
+      "categoria": "Regular",
+      "total_pedidos": 22,
+      "total_gasto_antes_desconto": 15128.05,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 756.4,
+      "total_gasto_apos_desconto": 14371.65,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 729,
+          "date": "2025-01-30",
+          "value": 2423.85,
+          "customer_mean": 687.64
+        }
+      ]
+    },
+    {
+      "customer_id": 40,
+      "nome": "Cliente_40",
+      "categoria": "Regular",
+      "total_pedidos": 21,
+      "total_gasto_antes_desconto": 10274.04,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 513.7,
+      "total_gasto_apos_desconto": 9760.34,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 204,
+          "date": "2025-02-21",
+          "value": 1752.8,
+          "customer_mean": 489.24
+        }
+      ]
+    },
+    {
+      "customer_id": 41,
+      "nome": "Cliente_41",
+      "categoria": "Regular",
+      "total_pedidos": 19,
+      "total_gasto_antes_desconto": 10100.79,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 505.04,
+      "total_gasto_apos_desconto": 9595.75,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 919,
+          "date": "2025-01-14",
+          "value": 1916.34,
+          "customer_mean": 531.62
+        }
+      ]
+    },
+    {
+      "customer_id": 42,
+      "nome": "Cliente_42",
+      "categoria": "VIP",
+      "total_pedidos": 19,
+      "total_gasto_antes_desconto": 11789.64,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1178.96,
+      "total_gasto_apos_desconto": 10610.68,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 344,
+          "date": "2025-02-01",
+          "value": 2204.58,
+          "customer_mean": 620.51
+        }
+      ]
+    },
+    {
+      "customer_id": 43,
+      "nome": "Cliente_43",
+      "categoria": "Regular",
+      "total_pedidos": 12,
+      "total_gasto_antes_desconto": 9067.77,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 453.39,
+      "total_gasto_apos_desconto": 8614.38,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 857,
+          "date": "2025-01-29",
+          "value": 2455.54,
+          "customer_mean": 755.65
+        }
+      ]
+    },
+    {
+      "customer_id": 44,
+      "nome": "Cliente_44",
+      "categoria": "VIP",
+      "total_pedidos": 14,
+      "total_gasto_antes_desconto": 9838.25,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 983.83,
+      "total_gasto_apos_desconto": 8854.42,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 807,
+          "date": "2025-02-27",
+          "value": 2403.66,
+          "customer_mean": 702.73
+        }
+      ]
+    },
+    {
+      "customer_id": 45,
+      "nome": "Cliente_45",
+      "categoria": "Regular",
+      "total_pedidos": 23,
+      "total_gasto_antes_desconto": 13874.18,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 693.71,
+      "total_gasto_apos_desconto": 13180.47,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 832,
+          "date": "2025-01-04",
+          "value": 2191.95,
+          "customer_mean": 603.23
+        }
+      ]
+    },
+    {
+      "customer_id": 46,
+      "nome": "Cliente_46",
+      "categoria": "VIP",
+      "total_pedidos": 12,
+      "total_gasto_antes_desconto": 8470.79,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 847.08,
+      "total_gasto_apos_desconto": 7623.71,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 908,
+          "date": "2025-02-05",
+          "value": 2291.84,
+          "customer_mean": 705.9
+        }
+      ]
+    },
+    {
+      "customer_id": 47,
+      "nome": "Cliente_47",
+      "categoria": "VIP",
+      "total_pedidos": 19,
+      "total_gasto_antes_desconto": 11344.57,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1134.46,
+      "total_gasto_apos_desconto": 10210.11,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 8,
+          "date": "2025-01-07",
+          "value": 2015.48,
+          "customer_mean": 597.08
+        }
+      ]
+    },
+    {
+      "customer_id": 48,
+      "nome": "Cliente_48",
+      "categoria": "Regular",
+      "total_pedidos": 21,
+      "total_gasto_antes_desconto": 13023.56,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 651.18,
+      "total_gasto_apos_desconto": 12372.38,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 272,
+          "date": "2025-01-16",
+          "value": 2167.17,
+          "customer_mean": 620.17
+        }
+      ]
+    },
+    {
+      "customer_id": 49,
+      "nome": "Cliente_49",
+      "categoria": "Regular",
+      "total_pedidos": 19,
+      "total_gasto_antes_desconto": 10610.17,
+      "desconto_aplicado_percentual": 5.0,
+      "desconto_valor": 530.51,
+      "total_gasto_apos_desconto": 10079.66,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 181,
+          "date": "2025-01-30",
+          "value": 1947.24,
+          "customer_mean": 558.43
+        }
+      ]
+    },
+    {
+      "customer_id": 50,
+      "nome": "Cliente_50",
+      "categoria": "VIP",
+      "total_pedidos": 26,
+      "total_gasto_antes_desconto": 14139.09,
+      "desconto_aplicado_percentual": 10.0,
+      "desconto_valor": 1413.91,
+      "total_gasto_apos_desconto": 12725.18,
+      "pedidos_suspeitos": [
+        {
+          "order_id": 839,
+          "date": "2025-01-10",
+          "value": 1903.35,
+          "customer_mean": 543.81
+        }
+      ]
+    }
+  ]
+}
