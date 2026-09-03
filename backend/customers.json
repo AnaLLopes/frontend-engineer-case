@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "name": "Cliente_1",
+    "tier": "VIP"
+  },
+  {
+    "id": 2,
+    "name": "Cliente_2",
+    "tier": "VIP"
+  },
+  {
+    "id": 3,
+    "name": "Cliente_3",
+    "tier": "Regular"
+  },
+  {
+    "id": 4,
+    "name": "Cliente_4",
+    "tier": "VIP"
+  },
+  {
+    "id": 5,
+    "name": "Cliente_5",
+    "tier": "Regular"
+  },
+  {
+    "id": 6,
+    "name": "Cliente_6",
+    "tier": "VIP"
+  },
+  {
+    "id": 7,
+    "name": "Cliente_7",
+    "tier": "Regular"
+  },
+  {
+    "id": 8,
+    "name": "Cliente_8",
+    "tier": "Regular"
+  },
+  {
+    "id": 9,
+    "name": "Cliente_9",
+    "tier": "VIP"
+  },
+  {
+    "id": 10,
+    "name": "Cliente_10",
+    "tier": "VIP"
+  },
+  {
+    "id": 11,
+    "name": "Cliente_11",
+    "tier": "Regular"
+  },
+  {
+    "id": 12,
+    "name": "Cliente_12",
+    "tier": "Regular"
+  },
+  {
+    "id": 13,
+    "name": "Cliente_13",
+    "tier": "VIP"
+  },
+  {
+    "id": 14,
+    "name": "Cliente_14",
+    "tier": "VIP"
+  },
+  {
+    "id": 15,
+    "name": "Cliente_15",
+    "tier": "Regular"
+  },
+  {
+    "id": 16,
+    "name": "Cliente_16",
+    "tier": "VIP"
+  },
+  {
+    "id": 17,
+    "name": "Cliente_17",
+    "tier": "VIP"
+  },
+  {
+    "id": 18,
+    "name": "Cliente_18",
+    "tier": "VIP"
+  },
+  {
+    "id": 19,
+    "name": "Cliente_19",
+    "tier": "Regular"
+  },
+  {
+    "id": 20,
+    "name": "Cliente_20",
+    "tier": "VIP"
+  },
+  {
+    "id": 21,
+    "name": "Cliente_21",
+    "tier": "VIP"
+  },
+  {
+    "id": 22,
+    "name": "Cliente_22",
+    "tier": "Regular"
+  },
+  {
+    "id": 23,
+    "name": "Cliente_23",
+    "tier": "VIP"
+  },
+  {
+    "id": 24,
+    "name": "Cliente_24",
+    "tier": "Regular"
+  },
+  {
+    "id": 25,
+    "name": "Cliente_25",
+    "tier": "Regular"
+  },
+  {
+    "id": 26,
+    "name": "Cliente_26",
+    "tier": "Regular"
+  },
+  {
+    "id": 27,
+    "name": "Cliente_27",
+    "tier": "VIP"
+  },
+  {
+    "id": 28,
+    "name": "Cliente_28",
+    "tier": "Regular"
+  },
+  {
+    "id": 29,
+    "name": "Cliente_29",
+    "tier": "Regular"
+  },
+  {
+    "id": 30,
+    "name": "Cliente_30",
+    "tier": "Regular"
+  },
+  {
+    "id": 31,
+    "name": "Cliente_31",
+    "tier": "Regular"
+  },
+  {
+    "id": 32,
+    "name": "Cliente_32",
+    "tier": "VIP"
+  },
+  {
+    "id": 33,
+    "name": "Cliente_33",
+    "tier": "VIP"
+  },
+  {
+    "id": 34,
+    "name": "Cliente_34",
+    "tier": "VIP"
+  },
+  {
+    "id": 35,
+    "name": "Cliente_35",
+    "tier": "Regular"
+  },
+  {
+    "id": 36,
+    "name": "Cliente_36",
+    "tier": "Regular"
+  },
+  {
+    "id": 37,
+    "name": "Cliente_37",
+    "tier": "Regular"
+  },
+  {
+    "id": 38,
+    "name": "Cliente_38",
+    "tier": "VIP"
+  },
+  {
+    "id": 39,
+    "name": "Cliente_39",
+    "tier": "Regular"
+  },
+  {
+    "id": 40,
+    "name": "Cliente_40",
+    "tier": "Regular"
+  },
+  {
+    "id": 41,
+    "name": "Cliente_41",
+    "tier": "Regular"
+  },
+  {
+    "id": 42,
+    "name": "Cliente_42",
+    "tier": "VIP"
+  },
+  {
+    "id": 43,
+    "name": "Cliente_43",
+    "tier": "Regular"
+  },
+  {
+    "id": 44,
+    "name": "Cliente_44",
+    "tier": "VIP"
+  },
+  {
+    "id": 45,
+    "name": "Cliente_45",
+    "tier": "Regular"
+  },
+  {
+    "id": 46,
+    "name": "Cliente_46",
+    "tier": "VIP"
+  },
+  {
+    "id": 47,
+    "name": "Cliente_47",
+    "tier": "VIP"
+  },
+  {
+    "id": 48,
+    "name": "Cliente_48",
+    "tier": "Regular"
+  },
+  {
+    "id": 49,
+    "name": "Cliente_49",
+    "tier": "Regular"
+  },
+  {
+    "id": 50,
+    "name": "Cliente_50",
+    "tier": "VIP"
+  }
+]

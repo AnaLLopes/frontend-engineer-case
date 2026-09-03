@@ -1,0 +1,4 @@
+# O analyzer.py roda apenas com a biblioteca padrão do Python (3.10+):
+# argparse, csv, json, decimal, datetime, collections. Nada aqui é necessário
+# para gerar o relatório — a única dependência é para executar os testes.
+pytest==8.3.4
