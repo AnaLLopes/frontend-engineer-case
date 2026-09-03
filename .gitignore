@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+.next-*/
+out/
+next-env.d.ts
+*.tsbuildinfo
+coverage/
+
+# frontend/public/report.json é gerado por `npm run report`, mas fica versionado
+# de propósito: serve de fixture do contrato e deixa o dashboard com dados no
+# primeiro `npm run dev`, sem exigir o passo do backend antes.
+
+# PDFs exportados pelo dashboard, caso sejam salvos dentro do repositório
+*.pdf
+# ...menos a documentação ilustrada, que é um artefato da entrega
+!docs/*.pdf
+
+# Sistema
+.DS_Store
+.env*.local
